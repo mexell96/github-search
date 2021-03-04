@@ -1,3 +1,4 @@
+import { Repos } from "./../components/Repos";
 import { Link } from "react-router-dom";
 import React, { useContext, useEffect } from "react";
 import { GithubContext } from "../context/github/githubContext";
@@ -84,7 +85,7 @@ export const Profile = ({ match }) => {
           </div>
         </div>
       </div>
-      {repos.join()}
+      <Repos repos={repos} />
     </>
   );
 };
